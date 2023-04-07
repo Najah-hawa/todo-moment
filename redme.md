@@ -5,3 +5,4 @@
 - settodo för att kontrollera att textstring för mer än fem tecken. 
 - savetodo för att lagra tasken som vi fått i json fil.
 - gettodo för att anropa task som finns i json fil som en array.  
+- det har också hanterats att radera enskilda todo-task och att radera hela listan.  
