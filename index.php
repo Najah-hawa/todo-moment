@@ -1,18 +1,15 @@
 <?php   
 include("includes/header.php");
 //delet enskeld task
-if (isset ($_GET["delete"])){
-$json = file_get_contents("todo.json");
-$todos = json_decode($json, true); 
-//pr($myArray);
-unset($todos[($_GET["delete"])]);
-$newArray = array_values($todos );
-//pr($newArray);
 
-$newArray = json_encode($newArray);
-file_put_contents('todo.json', $newArray);
-header('Location: index.php');
+
+
+$newtodo = new Todo();
+if (isset ($_GET['delete'])){
+  $delete  = intval ($_GET['delete']);
+  $newtodo -> delettodo($delete);
 }
+
 ?>
 
 
